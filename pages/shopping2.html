@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pure Template</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/fontawesome.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="login">
+			<div class="sing-up">
+				<span> <i class="fas fa-sign-in-alt"></i> Login </span>
+						|
+				<span> <i class="fas fa-user-plus"></i> Singup </span>
+			</div>
+		</div>
+		<div class="container">
+			<div class="container-wrapper">
+				<header class="main-header">
+					<div class="page-logo">
+						<a href="index.html"><img src="../images/market1.png"></a>
+					</div>
+					<nav class="menu">
+						<div class="nav-bar">
+							<i class="fas fa-bars" id="nav-btn"></i>
+						</div>
+						<div class="container-menu" id="containerMenu">
+							<div class="menu-list" id="menuList">
+								<ul>
+									<li>
+										<a href="../index.html">Home</a>
+									</li>
+									<li>
+										<a href="../market.html">Market</a>
+									</li>
+									<li>
+										<a href="shopping.html">Shopping</a>
+									</li>
+									<li>
+										<a href="#">Product</a>
+									</li>
+									<li>
+										<a href="#">Category</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</header>
+			</div>
+		</div>
+		<div class="shopping">
+			<div class="shopping-item">
+				<div class="item-detail">
+					<img src="../images/pen1.png">
+				</div>
+				<div class="market-detail">
+					<h3> Boss </h3>
+					<p> Brand : <span> Boss </span> </p>
+					<p> Seller : <span> CityMart </span> </p>
+					<p> Price : <span> 300 MMK </span> </p>
+					<label>
+						Quantity
+					<input type="number" name="number">
+					</label>
+					<button class="cart-btn"> <i class="fas fa-shopping-cart"></i> Add to Cart </button>
+					<button class="remove-btn"> <i class="fas fa-trash"></i> Remove to Cart </button>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="sub-footer">
+				<div class="container-footer">
+					<div class="col">
+						<h3>User Setting</h3>
+						<ul>
+							<li>
+								<a href="#">Service</a>
+							</li>
+							<li>
+								<a href="#">Setting</a>
+							</li>
+							<li>
+								<a href="#">Help</a>
+							</li>
+							<li>
+								<a href="#">Community</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col">
+						<h3>Trems Of Use</h3>
+						<ul>
+							<li>
+								<a href="#">Terms & Conditions</a>
+							</li>
+							<li>
+								<a href="#">Diverly & Returns</a>
+							</li>
+							<li>
+								<a href="#">Privacy Policy</a>
+							</li>
+							<li>
+								<a href="#">Report</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col">
+						<h3>Location</h3>
+						<ul>
+							<li>
+								<a href="#">
+									<i class="fas fa-map-marker-alt"></i> 38/Upper Street / SueLay
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fab fa-twitter"></i> Follow Us
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fas fa-envelope"></i> genie@gamil.com
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fas fa-phone"></i> +959-000-323214
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col">
+						<h3>Trems Of Use</h3>
+						<ul>
+							<li>
+								<a href="#">Terms & Conditions</a>
+							</li>
+							<li>
+								<a href="#">Diverly & Returns</a>
+							</li>
+							<li>
+								<a href="#">Privacy Policy</a>
+							</li>
+							<li>
+								<a href="#">Report</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<p class="copy-right">
+				Dev.HtetPhyoAung <i class="far fa-copyright"></i> copy right By Genie .
+			</p>
+		</div>
+	</div>
+
+
+	<script src="../js/jquery.js"></script>
+	<script src="../js/all.min.js"></script>
+	<script>
+		$(function() {
+			$("#nav-btn").on('click', function() {
+
+				$("#containerMenu").toggle("slow");
+			});
+
+			$(window).scroll(function() {
+
+ 				let scroll_bar = $(document).scrollTop();
+ 				if(scroll_bar > 99) {
+ 					$(".container").addClass("rf-fixed");
+ 				} else {
+ 					$(".container").removeClass("rf-fixed")
+ 				}
+
+			});
+		});
+	</script>
+</body>
+</html>
